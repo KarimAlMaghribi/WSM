@@ -1,23 +1,23 @@
 <vector android:height="24dp" android:viewportHeight="48"
     android:viewportWidth="48" android:width="24dp"
     xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#768085" android:fillType="nonZero"
+    <path android:fillColor="#00b0ff" android:fillType="nonZero"
         android:pathData="M7,43c-1.1046,0 -2,-0.8954 -2,-2v-34c0,-1.1046 0.8954,-2 2,-2h34c1.1046,0 2,0.8954 2,2v34c0,1.1046 -0.8954,2 -2,2z"
         android:strokeColor="#00000000" android:strokeLineCap="butt"
         android:strokeLineJoin="miter" android:strokeWidth="1"/>
     <path android:fillType="nonZero"
-        android:pathData="M30.9093,17.0907l12.0907,12.0907v11.8186c0,1.1046 -0.8954,2 -2,2l-11.8186,0l-12.0907,-12.0907c-1.7678,-1.7678 -2.8608,-4.2103 -2.8608,-6.9093c0,-5.398 4.3721,-9.7701 9.7701,-9.7701c2.699,0 5.1415,1.093 6.9093,2.8608z"
+        android:pathData="M15.7791,33.1979l0,0c-0.3536,-0.3536 -0.5722,-0.8421 -0.5722,-1.3819l0.0098,-13.6782c0,-1.0796 0.8647,-1.954 1.9442,-1.954h0.977v-1.954h1.954l1.954,1.954l5.8621,0v-1.954h1.954l13.1379,13.1379v13.6322c0,1.1046 -0.8954,2 -2,2h-15.4189z"
         android:strokeColor="#00000000" android:strokeLineCap="butt"
         android:strokeLineJoin="miter" android:strokeWidth="1">
         <aapt:attr name="android:fillColor">
-            <gradient android:endX="63.82215" android:endY="63.82215"
-                android:startX="14.22989" android:startY="14.22989" android:type="linear">
-                <item android:color="#77000000" android:offset="0"/>
+            <gradient android:endX="54.0063" android:endY="54.98331"
+                android:startX="15.2069" android:startY="14.22989" android:type="linear">
+                <item android:color="#4C000000" android:offset="0"/>
                 <item android:color="#00000000" android:offset="1"/>
             </gradient>
         </aapt:attr>
     </path>
     <path android:fillColor="#ffffff" android:fillType="nonZero"
-        android:pathData="M33.7701,24c0,5.398 -4.3721,9.7701 -9.7701,9.7701c-5.398,0 -9.7701,-4.3721 -9.7701,-9.7701c0,-5.398 4.3721,-9.7701 9.7701,-9.7701c5.398,0 9.7701,4.3721 9.7701,9.7701zM24.977,23.023h-1.954v5.8621h1.954zM24.977,19.115h-1.954v1.954h1.954z"
+        android:pathData="M32.7931,18.1379v13.6782c0,1.0796 -0.8744,1.954 -1.954,1.954h-13.6782c-1.0796,0 -1.954,-0.8744 -1.954,-1.954l0.0098,-13.6782c0,-1.0796 0.8647,-1.954 1.9442,-1.954h0.977v-1.954h1.954v1.954h7.8161v-1.954h1.954v1.954h0.977c1.0796,0 1.954,0.8744 1.954,1.954zM30.8391,21.069h-13.6782v10.7471h13.6782zM19.115,23.023h4.885v4.885h-4.885z"
         android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeWidth="0"/>
 </vector>
