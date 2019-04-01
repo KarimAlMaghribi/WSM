@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@drawable/ic_baseline_info_24px"
+        android:title="@string/nav_info" />
+
+    <item
+        android:id="@+id/nav_vehicle"
+        android:icon="@drawable/ic_baseline_tram_24px"
+        android:title="@string/nav_vehicle"/>
+
+    <item
+        android:id="@+id/nav_emptyspace"
+        android:title="Wartung"
+        android:enabled="false"
+
+       />
+
+
+
+    <item
+        android:id="@+id/nav_computer"
+        android:icon="@drawable/ic_baseline_computer_24px"
+        android:title="@string/nav_computer"/>
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/ic_grade_black_24dp"
+
+        android:title="@string/nav_favorites"/>
+
+
+
+
+</menu>

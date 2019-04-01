@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">BitCtrl_App_2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_info">Info</string>
+    <string name="nav_vehicle">Fahrzeuge</string>
+    <string name="nav_computer">Computer</string>
+    <string name="nav_favorites">Lesezeichen</string>
+    <string name="nav_add">Wartung</string>
+
+    <!-- Menu Navigation -->
+
+    <string name="nav_profile">Profil</string>
+    <string name="nav_settings">Einstellungen</string>
+    <string name="nav_impressum">Impressum</string>
+    <string name="nav_logout">Ausloggen</string>
+    <string name="nav_home">Home</string>
+
+
+
+
+
+</resources>
