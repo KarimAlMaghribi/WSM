@@ -1,73 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/shadow">
 
-    <LinearLayout
-        android:id="@+id/fragment_info_header_id"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@android:color/white">
-
+        android:background="@drawable/shadow">
 
         <LinearLayout
-            android:id="@+id/container_icons_id"
+            android:id="@+id/fragment_info_header_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/colorPrimary">
-
-                <ImageView
-
-                    android:layout_gravity="center_vertical"
-                    android:id="@+id/icon_time"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_marginLeft="60dp"
-                    android:src="@drawable/ic_icon_date_2" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
+                android:id="@+id/container_icons_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="end"
-                android:background="@color/colorPrimary">
+                android:layout_marginBottom="8dp">
 
-                <ImageView
-                    android:layout_gravity="center_vertical"
-                    android:id="@+id/icon_stats"
-                    android:layout_width="55dp"
-                    android:layout_height="55dp"
-                    android:layout_marginRight="68dp"
-                    android:src="@drawable/ic_icon_numbers" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorPrimary">
+
+                    <ImageView
+
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/icon_time"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="45dp"
+                        android:src="@drawable/ic_icon_today2" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:background="@color/colorPrimary">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/icon_stats"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="120dp"
+                        android:src="@drawable/ic_icon_timeline_1" />
+
+                </LinearLayout>
+
+
 
             </LinearLayout>
 
-
-
         </LinearLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:background="@android:color/white"
+            android:scrollbars="vertical"
+            android:tag="info">
+
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="4dp"
-        android:background="@android:color/white"
-        android:scrollbars="vertical"
-        android:tag="info"
-        ></androidx.recyclerview.widget.RecyclerView>
-</LinearLayout>
+
