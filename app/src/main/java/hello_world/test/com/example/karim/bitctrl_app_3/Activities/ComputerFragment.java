@@ -40,7 +40,7 @@ public class ComputerFragment extends Fragment {
 
         Call<List<ComputerEntity>> call = null;
         try {
-            call = connector.get_request();
+            call = connector.get_call(view.getContext());
         } catch (IOException e) {
             e.printStackTrace();
         }
