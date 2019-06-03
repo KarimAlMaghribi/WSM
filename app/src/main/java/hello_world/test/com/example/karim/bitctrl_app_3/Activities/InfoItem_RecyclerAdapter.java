@@ -1,4 +1,4 @@
-package hello_world.test.com.example.karim.bitctrl_app_3;
+package hello_world.test.com.example.karim.bitctrl_app_3.Activities;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import hello_world.test.com.example.karim.bitctrl_app_3.R;
+import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Recycler_Info_Item;
 
 public class InfoItem_RecyclerAdapter extends RecyclerView.Adapter<InfoItem_RecyclerAdapter.Item_ViewHolder> {
 
