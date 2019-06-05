@@ -1,58 +1,73 @@
-
 package hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import java.util.HashMap;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.util.Date;
 import java.util.Map;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "type",
-    "properties"
-})
-public class ServicePoint {
+@JsonDeserialize(
+    as = ServicePointImpl.class
+)
+public interface ServicePoint {
+  @JsonAnyGetter
+  Map<String, Object> getAdditionalProperties();
 
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("properties")
-    private ServicePointProperties properties;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  @JsonAnySetter
+  void setAdditionalProperties(String key, Object value);
 
-    @JsonProperty("type")
-    public String getType() {
-        return type;
-    }
+  @JsonProperty("id")
+  Number getId();
 
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
-    }
+  @JsonProperty("id")
+  void setId(Number id);
 
-    @JsonProperty("properties")
-    public ServicePointProperties getProperties() {
-        return properties;
-    }
+  @JsonProperty("computer")
+  Number getComputer();
 
-    @JsonProperty("properties")
-    public void setProperties(ServicePointProperties properties) {
-        this.properties = properties;
-    }
+  @JsonProperty("computer")
+  void setComputer(Number computer);
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
+  @JsonProperty("playersystem")
+  Number getPlayersystem();
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+  @JsonProperty("playersystem")
+  void setPlayersystem(Number playersystem);
 
+  @JsonProperty("user")
+  Number getUser();
+
+  @JsonProperty("user")
+  void setUser(Number user);
+
+  @JsonProperty("servicetime")
+  Date getServicetime();
+
+  @JsonProperty("servicetime")
+  void setServicetime(Date servicetime);
+
+  @JsonProperty("shortdescription")
+  String getShortdescription();
+
+  @JsonProperty("shortdescription")
+  void setShortdescription(String shortdescription);
+
+  @JsonProperty("description")
+  String getDescription();
+
+  @JsonProperty("description")
+  void setDescription(String description);
+
+  @JsonProperty("externorderno")
+  String getExternorderno();
+
+  @JsonProperty("externorderno")
+  void setExternorderno(String externorderno);
+
+  @JsonProperty("assembler")
+  String getAssembler();
+
+  @JsonProperty("assembler")
+  void setAssembler(String assembler);
 }

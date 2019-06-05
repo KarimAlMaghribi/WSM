@@ -1,58 +1,72 @@
-
 package hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import java.util.HashMap;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Map;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "type",
-    "properties"
-})
-public class PlayerSystem {
+@JsonDeserialize(
+    as = PlayerSystemImpl.class
+)
+public interface PlayerSystem {
+  @JsonAnyGetter
+  Map<String, Object> getAdditionalProperties();
 
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("properties")
-    private PlayerSystemProperties properties;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  @JsonAnySetter
+  void setAdditionalProperties(String key, Object value);
 
-    @JsonProperty("type")
-    public String getType() {
-        return type;
-    }
+  @JsonProperty("id")
+  Number getId();
 
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
-    }
+  @JsonProperty("id")
+  void setId(Number id);
 
-    @JsonProperty("properties")
-    public PlayerSystemProperties getProperties() {
-        return properties;
-    }
+  @JsonProperty("owner")
+  String getOwner();
 
-    @JsonProperty("properties")
-    public void setProperties(PlayerSystemProperties properties) {
-        this.properties = properties;
-    }
+  @JsonProperty("owner")
+  void setOwner(String owner);
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
+  @JsonProperty("playerstystemGroup")
+  String getPlayerstystemGroup();
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+  @JsonProperty("playerstystemGroup")
+  void setPlayerstystemGroup(String playerstystemGroup);
 
+  @JsonProperty("playersystemType")
+  Number getPlayersystemType();
+
+  @JsonProperty("playersystemType")
+  void setPlayersystemType(Number playersystemType);
+
+  @JsonProperty("manufactor")
+  String getManufactor();
+
+  @JsonProperty("manufactor")
+  void setManufactor(String manufactor);
+
+  @JsonProperty("name")
+  String getName();
+
+  @JsonProperty("name")
+  void setName(String name);
+
+  @JsonProperty("description")
+  String getDescription();
+
+  @JsonProperty("description")
+  void setDescription(String description);
+
+  @JsonProperty("enable")
+  boolean getEnable();
+
+  @JsonProperty("enable")
+  void setEnable(boolean enable);
+
+  @JsonProperty("bordcomputerid")
+  String getBordcomputerid();
+
+  @JsonProperty("bordcomputerid")
+  void setBordcomputerid(String bordcomputerid);
 }

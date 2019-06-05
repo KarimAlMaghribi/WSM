@@ -2,15 +2,18 @@ package hello_world.test.com.example.karim.bitctrl_app_3.Model.Model.Model;
 
 import java.util.Date;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.User;
 
 @Entity(tableName="computers")
-public class Computer_Note {
+public class ComputerNote {
 
     @PrimaryKey
-    private String id;
+    @NonNull
+    private int id;
 
     //@ForeignKey()
     private int playersystem;
@@ -18,7 +21,7 @@ public class Computer_Note {
     private int  installationpoint;
 
     private String company;
-    private User support;
+    private int supportID;
     private String channel;
     private String typ;
     private String distributiontyp;
@@ -30,7 +33,7 @@ public class Computer_Note {
     private String logid;
     private boolean enable;
     private  String description;
-    private Date lastvalidupdate;
+    private String lastvalidupdate;
     private String ip;
     private String mac;
     private String maclan;
@@ -39,18 +42,20 @@ public class Computer_Note {
     private String sernumber;
     private int operationhours;
 
-    public Computer_Note(String id, int playersystem, int installationpoint,
-                         String company, User support, String channel, String typ,
-                         String distributiontyp, String playeros, String playertyp,
-                         String hostname, String phonenumber, String sim, String logid,
-                         boolean enable, String description, Date lastvalidupdate, String ip,
-                         String mac, String maclan, String macversion, String maincontrolversion,
-                         String sernumber, int operationhours) {
+
+
+    public ComputerNote(int id, int playersystem, int installationpoint,
+                        String company, int supportID, String channel, String typ,
+                        String distributiontyp, String playeros, String playertyp,
+                        String hostname, String phonenumber, String sim, String logid,
+                        boolean enable, String description, String lastvalidupdate, String ip,
+                        String mac, String maclan, String macversion, String maincontrolversion,
+                        String sernumber, int operationhours) {
         this.id = id;
         this.playersystem = playersystem;
         this.installationpoint = installationpoint;
         this.company = company;
-        this.support = support;
+        this.supportID = supportID;
         this.channel = channel;
         this.typ = typ;
         this.distributiontyp = distributiontyp;
@@ -72,7 +77,7 @@ public class Computer_Note {
         this.operationhours = operationhours;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -88,8 +93,8 @@ public class Computer_Note {
         return company;
     }
 
-    public User getSupport() {
-        return support;
+    public int getSupportID() {
+        return supportID;
     }
 
     public String getChannel() {
@@ -136,7 +141,7 @@ public class Computer_Note {
         return description;
     }
 
-    public Date getLastvalidupdate() {
+    public String getLastvalidupdate() {
         return lastvalidupdate;
     }
 

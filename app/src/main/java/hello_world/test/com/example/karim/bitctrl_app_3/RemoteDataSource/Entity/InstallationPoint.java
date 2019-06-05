@@ -1,58 +1,42 @@
-
 package hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import java.util.HashMap;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Map;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "type",
-    "properties"
-})
-public class InstallationPoint {
+@JsonDeserialize(
+    as = InstallationPointImpl.class
+)
+public interface InstallationPoint {
+  @JsonAnyGetter
+  Map<String, Object> getAdditionalProperties();
 
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("properties")
-    private InstallationPointProperties properties;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  @JsonAnySetter
+  void setAdditionalProperties(String key, Object value);
 
-    @JsonProperty("type")
-    public String getType() {
-        return type;
-    }
+  @JsonProperty("id")
+  Number getId();
 
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
-    }
+  @JsonProperty("id")
+  void setId(Number id);
 
-    @JsonProperty("properties")
-    public InstallationPointProperties getProperties() {
-        return properties;
-    }
+  @JsonProperty("playersystem")
+  Number getPlayersystem();
 
-    @JsonProperty("properties")
-    public void setProperties(InstallationPointProperties properties) {
-        this.properties = properties;
-    }
+  @JsonProperty("playersystem")
+  void setPlayersystem(Number playersystem);
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
+  @JsonProperty("typ")
+  int getTyp();
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+  @JsonProperty("typ")
+  void setTyp(int typ);
 
+  @JsonProperty("name")
+  String getName();
+
+  @JsonProperty("name")
+  void setName(String name);
 }

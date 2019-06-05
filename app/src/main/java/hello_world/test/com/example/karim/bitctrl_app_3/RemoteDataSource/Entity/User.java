@@ -1,58 +1,97 @@
-
 package hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-import java.util.HashMap;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import java.util.List;
 import java.util.Map;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "type",
-    "properties"
-})
-public class User {
+@JsonDeserialize(
+    as = UserImpl.class
+)
+public interface User {
+  @JsonAnyGetter
+  Map<String, Object> getAdditionalProperties();
 
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("properties")
-    private UserProperties properties;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  @JsonAnySetter
+  void setAdditionalProperties(String key, Object value);
 
-    @JsonProperty("type")
-    public String getType() {
-        return type;
-    }
+  @JsonProperty("id")
+  Number getId();
 
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
-    }
+  @JsonProperty("id")
+  void setId(Number id);
 
-    @JsonProperty("properties")
-    public UserProperties getProperties() {
-        return properties;
-    }
+  @JsonProperty("country")
+  String getCountry();
 
-    @JsonProperty("properties")
-    public void setProperties(UserProperties properties) {
-        this.properties = properties;
-    }
+  @JsonProperty("country")
+  void setCountry(String country);
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
+  @JsonProperty("company")
+  String getCompany();
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+  @JsonProperty("company")
+  void setCompany(String company);
 
+  @JsonProperty("firstname")
+  String getFirstname();
+
+  @JsonProperty("firstname")
+  void setFirstname(String firstname);
+
+  @JsonProperty("lastname")
+  String getLastname();
+
+  @JsonProperty("lastname")
+  void setLastname(String lastname);
+
+  @JsonProperty("login")
+  String getLogin();
+
+  @JsonProperty("login")
+  void setLogin(String login);
+
+  @JsonProperty("street")
+  String getStreet();
+
+  @JsonProperty("street")
+  void setStreet(String street);
+
+  @JsonProperty("city")
+  String getCity();
+
+  @JsonProperty("city")
+  void setCity(String city);
+
+  @JsonProperty("phone")
+  String getPhone();
+
+  @JsonProperty("phone")
+  void setPhone(String phone);
+
+  @JsonProperty("mobile")
+  String getMobile();
+
+  @JsonProperty("mobile")
+  void setMobile(String mobile);
+
+  @JsonProperty("fax")
+  String getFax();
+
+  @JsonProperty("fax")
+  void setFax(String fax);
+
+  @JsonProperty("email")
+  String getEmail();
+
+  @JsonProperty("email")
+  void setEmail(String email);
+
+  @JsonProperty("roles")
+  List<Number> getRoles();
+
+  @JsonProperty("roles")
+  void setRoles(List<Number> roles);
 }
