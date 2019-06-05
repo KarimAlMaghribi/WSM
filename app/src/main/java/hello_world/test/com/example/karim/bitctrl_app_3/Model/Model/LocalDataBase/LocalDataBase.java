@@ -16,7 +16,7 @@ import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Connect
 import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Converter.RemoteDataLocalDataComputer;
 import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.ComputerImpl;
 
-@Database(entities = {ComputerNote.class}, version = 1)
+@Database(entities = {ComputerNote.class}, version = 1, exportSchema = false)
 
 public abstract class LocalDataBase extends RoomDatabase {
 
