@@ -18,6 +18,7 @@ import java.util.List;
 
 import javax.ws.rs.core.HttpHeaders;
 
+import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.Computer;
 import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.ComputerImpl;
 import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.PlayerSystem;
 
@@ -27,7 +28,7 @@ public class RetrieveComputerTask   {
     private Exception exception;
 
 
-    public List<ComputerImpl> getAllComputers() {
+    public List<Computer> getAllComputers() {
 
         Credentials credentials = new Credentials();
 
@@ -50,7 +51,7 @@ public class RetrieveComputerTask   {
                 rd.close();
 
                 ObjectMapper mapper = new ObjectMapper();
-                ComputerImpl[] result = mapper.readValue(response.toString(),ComputerImpl[].class);
+                Computer[] result = mapper.readValue(response.toString(),ComputerImpl[].class);
                 return  Arrays.asList(result);
             }
 

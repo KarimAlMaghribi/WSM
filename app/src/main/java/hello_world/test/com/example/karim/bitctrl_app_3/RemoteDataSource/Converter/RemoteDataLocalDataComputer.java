@@ -1,13 +1,22 @@
 package hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Converter;
 
 import hello_world.test.com.example.karim.bitctrl_app_3.Model.Model.Model.ComputerNote;
+import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.Computer;
 import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.ComputerImpl;
+import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.User;
 
 public class RemoteDataLocalDataComputer {
 
-DateToString dateToString = new DateToString();
+    private static final DateToString dateToString = new DateToString();
 
-    public ComputerNote convertRemoteDataToLocalData( ComputerImpl remoteDataComputer){
+    private String bubu;
+
+    public static final User convertRemoteUserToLocalUser(User remotUser){
+
+        return remotUser;
+    }
+
+    public static ComputerNote convertRemoteDataToLocalData( Computer remoteDataComputer){
         ComputerNote localDataComputer = new ComputerNote(
                 remoteDataComputer.getId().intValue(),
                 remoteDataComputer.getPlayersystem().intValue(),
@@ -33,7 +42,6 @@ DateToString dateToString = new DateToString();
                 remoteDataComputer.getMaincontrolversion(),
                 remoteDataComputer.getSernumber(),
                 remoteDataComputer.getOperationhours() );
-
         return localDataComputer;
     }
 }
