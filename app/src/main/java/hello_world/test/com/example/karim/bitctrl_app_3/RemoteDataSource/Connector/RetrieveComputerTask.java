@@ -38,7 +38,8 @@ public class RetrieveComputerTask   {
             String authToken = credentials.getAuthToken();
             final URL url = new URL("http://192.168.1.227:8080/json/computers");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setRequestProperty(HttpHeaders.AUTHORIZATION,authToken);
+            con.setRequestMethod("GET");
+            con.setRequestProperty("Authorization", authToken);
 
             try(InputStream in = con.getInputStream()){
                 BufferedReader rd = new BufferedReader(new InputStreamReader(in, Charset.forName("UTF-8")));

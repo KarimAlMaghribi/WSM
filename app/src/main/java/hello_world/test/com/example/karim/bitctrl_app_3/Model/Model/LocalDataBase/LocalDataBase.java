@@ -9,10 +9,13 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import java.util.List;
+
 import hello_world.test.com.example.karim.bitctrl_app_3.Model.Model.DataAccessObjects.ComputerNoteDAO;
 import hello_world.test.com.example.karim.bitctrl_app_3.Model.Model.Model.ComputerNote;
 import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Connector.RetrieveComputerTask;
 import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Converter.RemoteDataLocalDataComputer;
+import hello_world.test.com.example.karim.bitctrl_app_3.RemoteDataSource.Entity.Computer;
 
 @Database(entities = {ComputerNote.class}, version = 1, exportSchema = false)
 
@@ -26,7 +29,7 @@ public abstract class LocalDataBase extends RoomDatabase {
     public static synchronized LocalDataBase getInstance(Context context) {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(),
-                    LocalDataBase.class, "Database")
+                    LocalDataBase.class, "database")
                     .fallbackToDestructiveMigration()
                     .addCallback(roomCallback)
                     .build();
@@ -52,9 +55,25 @@ public abstract class LocalDataBase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(Void... voids) {
+            if(android.os.Debug.isDebuggerConnected())
+                android.os.Debug.waitForDebugger();
+           /* List<Computer> allComputers = computerTask.getAllComputers();
+            if (allComputers == null ){
+                System.out.println("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+            }
+            for (Computer computer : allComputers) {
 
 
-            computerTask.getAllComputers().stream().map(c -> RemoteDataLocalDataComputer.convertRemoteDataToLocalData(c)).forEach(c -> computerNoteDAO.insert(c));
+                //RemoteDataLocalDataComputer.convertRemoteComputerToLocalComputer(computer)
+            } */
+            ComputerNote computerNote = new ComputerNote();
+            computerNote.setId(2);
+            ComputerNote computerNote1 = new ComputerNote();
+            computerNote.setId(1);
+            computerNoteDAO.insert(computerNote);
+            computerNoteDAO.insert(computerNote1);
+
+            //computerTask.getAllComputers().stream().map(c -> RemoteDataLocalDataComputer.convertRemoteComputerToLocalComputer(c)).forEach(c -> computerNoteDAO.insert(c));
 
 
             return null;

@@ -16,32 +16,35 @@ public class RemoteDataLocalDataComputer {
         return remotUser;
     }
 
-    public static ComputerNote convertRemoteDataToLocalData( Computer remoteDataComputer){
-        ComputerNote localDataComputer = new ComputerNote(
-                remoteDataComputer.getId().intValue(),
-                remoteDataComputer.getPlayersystem().intValue(),
-                remoteDataComputer.getInstallationpoint().intValue(),
-                remoteDataComputer.getCompany(),
-                remoteDataComputer.getSupport().getId().intValue(),
-                remoteDataComputer.getChannel(),
-                remoteDataComputer.getTyp(),
-                remoteDataComputer.getDistributiontyp(),
-                remoteDataComputer.getPlayeros(),
-                remoteDataComputer.getPlayertyp(),
-                remoteDataComputer.getHostname(),
-                remoteDataComputer.getPhonenumber(),
-                remoteDataComputer.getSim(),
-                remoteDataComputer.getLogid(),
-                remoteDataComputer.getEnable(),
-                remoteDataComputer.getDescription(),
-                dateToString.getStrDate(remoteDataComputer.getLastvalidupdate()),
-                remoteDataComputer.getIp(),
-                remoteDataComputer.getMac(),
-                remoteDataComputer.getMaclan(),
-                remoteDataComputer.getMacversion(),
-                remoteDataComputer.getMaincontrolversion(),
-                remoteDataComputer.getSernumber(),
-                remoteDataComputer.getOperationhours() );
+    public static ComputerNote convertRemoteComputerToLocalComputer( Computer remoteDataComputer){
+
+        ComputerNote localDataComputer = new ComputerNote();
+
+        localDataComputer.setId(remoteDataComputer.getId().intValue());
+        localDataComputer.setPlayersystem(remoteDataComputer.getPlayersystem().intValue());
+        localDataComputer.setInstallationpoint(remoteDataComputer.getInstallationpoint().intValue());
+        localDataComputer.setCompany(remoteDataComputer.getCompany());
+        localDataComputer.setSupportID(remoteDataComputer.getSupport().getId().intValue());
+        localDataComputer.setChannel(remoteDataComputer.getChannel());
+        localDataComputer.setTyp(remoteDataComputer.getTyp());
+        localDataComputer.setDistributiontyp(remoteDataComputer.getDistributiontyp());
+        localDataComputer.setPlayeros(remoteDataComputer.getPlayeros());
+        localDataComputer.setPlayertyp(remoteDataComputer.getPlayertyp());
+        localDataComputer.setHostname(remoteDataComputer.getHostname());
+        localDataComputer.setPhonenumber(remoteDataComputer.getPhonenumber());
+        localDataComputer.setSim(remoteDataComputer.getSim());
+        localDataComputer.setLogid(remoteDataComputer.getLogid());
+        localDataComputer.setEnable(remoteDataComputer.getEnable());
+        localDataComputer.setDescription(remoteDataComputer.getDescription());
+        localDataComputer.setLastvalidupdate(dateToString.getStrDate(remoteDataComputer.getLastvalidupdate()));
+        localDataComputer.setIp(remoteDataComputer.getIp());
+        localDataComputer.setMac(remoteDataComputer.getMac());
+        localDataComputer.setMaclan(remoteDataComputer.getMaclan());
+        localDataComputer.setMacversion(remoteDataComputer.getMacversion());
+        localDataComputer.setMaincontrolversion(remoteDataComputer.getMaincontrolversion());
+        localDataComputer.setSernumber(remoteDataComputer.getSernumber());
+        localDataComputer.setOperationhours(remoteDataComputer.getOperationhours());
+
         return localDataComputer;
     }
 }

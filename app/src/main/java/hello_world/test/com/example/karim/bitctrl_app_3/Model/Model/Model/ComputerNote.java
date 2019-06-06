@@ -44,7 +44,7 @@ public class ComputerNote {
 
 
 
-    public ComputerNote(int id, int playersystem, int installationpoint,
+   /* public ComputerNote(int id, int playersystem, int installationpoint,
                         String company, int supportID, String channel, String typ,
                         String distributiontyp, String playeros, String playertyp,
                         String hostname, String phonenumber, String sim, String logid,
@@ -75,7 +75,7 @@ public class ComputerNote {
         this.maincontrolversion = maincontrolversion;
         this.sernumber = sernumber;
         this.operationhours = operationhours;
-    }
+    }*/
 
     public int getId() {
         return id;
@@ -171,6 +171,102 @@ public class ComputerNote {
 
     public int getOperationhours() {
         return operationhours;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPlayersystem(int playersystem) {
+        this.playersystem = playersystem;
+    }
+
+    public void setInstallationpoint(int installationpoint) {
+        this.installationpoint = installationpoint;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public void setSupportID(int supportID) {
+        this.supportID = supportID;
+    }
+
+    public void setChannel(String channel) {
+        this.channel = channel;
+    }
+
+    public void setTyp(String typ) {
+        this.typ = typ;
+    }
+
+    public void setDistributiontyp(String distributiontyp) {
+        this.distributiontyp = distributiontyp;
+    }
+
+    public void setPlayeros(String playeros) {
+        this.playeros = playeros;
+    }
+
+    public void setPlayertyp(String playertyp) {
+        this.playertyp = playertyp;
+    }
+
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public void setSim(String sim) {
+        this.sim = sim;
+    }
+
+    public void setLogid(String logid) {
+        this.logid = logid;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setLastvalidupdate(String lastvalidupdate) {
+        this.lastvalidupdate = lastvalidupdate;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public void setMac(String mac) {
+        this.mac = mac;
+    }
+
+    public void setMaclan(String maclan) {
+        this.maclan = maclan;
+    }
+
+    public void setMacversion(String macversion) {
+        this.macversion = macversion;
+    }
+
+    public void setMaincontrolversion(String maincontrolversion) {
+        this.maincontrolversion = maincontrolversion;
+    }
+
+    public void setSernumber(String sernumber) {
+        this.sernumber = sernumber;
+    }
+
+    public void setOperationhours(int operationhours) {
+        this.operationhours = operationhours;
     }
 }
 
