@@ -41,7 +41,7 @@ public class ComputerFragment extends Fragment {
 
 
     }
-
+/*
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,5 +54,5 @@ public class ComputerFragment extends Fragment {
                 Toast.makeText(getActivity(), "onchanged", Toast.LENGTH_SHORT ).show();
             }
         });
-    }
+    }*/
 }
